@@ -22,10 +22,11 @@ to confirm before it changes anything in your account.
 ## What you need
 
 - **A ShiftCare account** with AI access switched on. An Admin does this under
-  **Account → AI Settings**. Changes to your data stay off until an Admin also
-  enables write actions.
-- **An AI assistant that supports MCP.** We test Claude and Codex. Others, such
-  as ChatGPT and Microsoft Copilot, generally work too.
+  **Account → AI Settings → AI Access → "MCP - External AI Model Access"**.
+  Changing your data is a separate toggle, **Allow Write Actions**, and is off
+  until an Admin enables it.
+- **An AI assistant that supports both MCP and skills.** We test Claude and
+  Codex. Others, such as ChatGPT and Microsoft Copilot, generally work too.
 
 ## Getting started
 
@@ -78,21 +79,42 @@ npx skills update
 
 **Compliance and quality**
 
+These report what your records show, and what an advisory checklist suggests
+reviewing. Whether you are compliant is a determination you and your regulator
+make — no skill here makes it for you.
+
 | Skill | What you can ask for |
 | --- | --- |
-| [`shiftcare-staff-compliance-check`](skills/shiftcare-staff-compliance-check/SKILL.md) | "Who's out of compliance?" — expired, expiring, missing and unverified credentials, optionally checked against an NDIS or aged-care list. |
+| [`shiftcare-staff-compliance-check`](skills/shiftcare-staff-compliance-check/SKILL.md) | "Which credentials need attention?" — expired, expiring, missing and unverified records, optionally matched against an advisory NDIS or aged-care checklist. |
 | [`shiftcare-complaints`](skills/shiftcare-complaints/SKILL.md) | "Log a complaint about..." — lodging and managing complaints, including linked incidents. |
 | [`shiftcare-action-items`](skills/shiftcare-action-items/SKILL.md) | "What should we do about this complaint?" — suggests and assigns follow-up actions. |
 
-## Your data stays yours
+## Who can see what
+
+**What ShiftCare controls:**
 
 - Your assistant signs in to ShiftCare the same way you do, in a browser. There
   are no keys or passwords to copy around.
-- It only sees what your ShiftCare role lets you see.
-- Everything is read-only until an Admin turns on write actions — and even then,
+- It only sees what your own ShiftCare role lets you see — never more.
+- Everything is read-only until an Admin turns on write actions, and even then
   any skill that changes your data asks you to confirm first.
-- The installer is Vercel's open-source `skills` CLI, which sends anonymous
-  install counts. Set `DISABLE_TELEMETRY=1` to switch that off.
+
+**What your organisation is responsible for:**
+
+- **Your care data leaves ShiftCare when you ask for it.** Client records,
+  including personal and health information, travel to whichever AI assistant
+  you connected, and are handled under that provider's terms. ShiftCare cannot
+  see those conversations.
+- Meeting your own obligations — NDIS, aged care, privacy law — for the data
+  once it arrives there.
+
+Worth reading before you start:
+[Connecting an AI Assistant to Your Care Data](https://shiftcare.com/blog/connecting-ai-assistant-your-care-data),
+on what an assistant can see, what it can't, and who is responsible, and the
+[MCP data handling overview](https://help.shiftcare.com/en/articles/15652546-shiftcare-mcp-server-data-handling-overview).
+
+The installer is Vercel's open-source `skills` CLI, which sends anonymous
+install counts. Set `DISABLE_TELEMETRY=1` to switch that off.
 
 ## More help
 
