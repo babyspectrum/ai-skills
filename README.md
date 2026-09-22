@@ -2,6 +2,11 @@
 
 Ask your AI assistant to do your ShiftCare admin for you.
 
+[ShiftCare](https://www.shiftcare.com) is care management software for
+disability, aged care and home care providers, operating in Australia, the
+United Kingdom, the United States and Canada. It covers rostering, care
+delivery, documentation, compliance and billing on one record.
+
 These skills teach an AI assistant — Claude, ChatGPT, Microsoft Copilot — how to
 work with your ShiftCare account properly. Once they're installed, you can ask
 for things in plain English:
@@ -28,8 +33,8 @@ to confirm before it changes anything in your account.
   Access** — without it the login will simply reject you. Support workers can't
   connect at all.
 - **Write access, if you want it.** **Allow Write Actions** is a separate
-  toggle, off until an Admin enables it. Back-office roles stay read-only even
-  when it's on.
+  toggle, off until an Admin enables it. Writing is admin-only: a back-office
+  role can never write through an assistant, whatever that toggle says.
 - **An AI assistant that supports both MCP and skills.** We test Claude and
   Codex. Others, such as ChatGPT and Microsoft Copilot, generally work too.
 
@@ -143,7 +148,8 @@ uv run --with skills-ref==0.1.1 scripts/validate_skills.py
 
 [`public_ai_skills.yml`](public_ai_skills.yml) publishes the minimum and latest
 supported version of each skill. Validation fails if it drifts from the versions
-in the skill frontmatter. Contributor rules are in [AGENTS.md](AGENTS.md).
+in the skill frontmatter. Contributor rules are in [AGENTS.md](AGENTS.md),
+and the security policy is in [SECURITY.md](SECURITY.md).
 
 ## License
 
