@@ -23,8 +23,13 @@ to confirm before it changes anything in your account.
 
 - **A ShiftCare account** with AI access switched on. An Admin does this under
   **Account → AI Settings → AI Access → "MCP - External AI Model Access"**.
-  Changing your data is a separate toggle, **Allow Write Actions**, and is off
-  until an Admin enables it.
+- **Permission to connect.** Admins can straight away. If you're a Coordinator,
+  HR, Ops or Support user, an Admin also has to turn on **Allow Back Office
+  Access** — without it the login will simply reject you. Support workers can't
+  connect at all.
+- **Write access, if you want it.** **Allow Write Actions** is a separate
+  toggle, off until an Admin enables it. Back-office roles stay read-only even
+  when it's on.
 - **An AI assistant that supports both MCP and skills.** We test Claude and
   Codex. Others, such as ChatGPT and Microsoft Copilot, generally work too.
 
@@ -97,7 +102,8 @@ make — no skill here makes it for you.
   are no keys or passwords to copy around.
 - It only sees what your own ShiftCare role lets you see — never more.
 - Everything is read-only until an Admin turns on write actions, and even then
-  any skill that changes your data asks you to confirm first.
+  any skill that changes your data asks you to confirm first. Back-office roles
+  are read-only regardless.
 
 **What your organisation is responsible for:**
 
