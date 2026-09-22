@@ -84,7 +84,7 @@ npx skills update
 
 | Skill | What you can ask for |
 | --- | --- |
-| [`shiftcare-client-summary`](skills/shiftcare-client-summary/SKILL.md) | "Catch me up on this client" — recent shifts, upcoming schedule, note coverage, regular staff. |
+| [`shiftcare-client-summary`](skills/shiftcare-client-summary/SKILL.md) | "Catch me up on this client" — shifts over a recent window you choose, the service pattern they show, progress-note coverage, and who was rostered most in that window. |
 | [`shiftcare-create-note`](skills/shiftcare-create-note/SKILL.md) | "Add a note about..." — files it as a client communication or a shift progress note. |
 
 **Compliance and quality**
@@ -96,7 +96,7 @@ make — no skill here makes it for you.
 | Skill | What you can ask for |
 | --- | --- |
 | [`shiftcare-staff-compliance-check`](skills/shiftcare-staff-compliance-check/SKILL.md) | "Which credentials need attention?" — expired, expiring, missing and unverified records, optionally matched against an advisory NDIS or aged-care checklist. |
-| [`shiftcare-complaints`](skills/shiftcare-complaints/SKILL.md) | "Log a complaint about..." — lodging and managing complaints, including linked incidents. |
+| [`shiftcare-complaints`](skills/shiftcare-complaints/SKILL.md) | "Log a complaint about..." — lodging, triaging and progressing complaints, and flagging when something needs your incident or escalation process instead. |
 | [`shiftcare-action-items`](skills/shiftcare-action-items/SKILL.md) | "What should we do about this complaint?" — suggests and assigns follow-up actions. |
 
 ## Who can see what
