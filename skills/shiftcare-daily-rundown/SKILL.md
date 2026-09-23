@@ -123,7 +123,7 @@ and say so rather than guessing at its findings.
 window was truncated** rather than burning the context on a large roster.
 
 Keep per shift: `id`, `start_at`, `end_at`, `break_time`, `km`, `published`, `pending`,
-`is_approved`, `cancelled_at`, `address`, `url`, and each client's name, `absent_reason` and `line_items`.
+`is_approved`, `cancelled_at`, `address`, `url`, and each client's `id`, name, `absent_reason` and `line_items`.
 
 **Drop every cancelled shift before any other check.** A shift is cancelled when
 `cancelled_at` is non-null (cancelled without charge) **or** every client on it has an
